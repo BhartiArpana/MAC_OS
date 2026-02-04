@@ -7,6 +7,7 @@ import Github from './components/window/Github'
 import Note from './components/window/Note'
 import Resume from './components/window/Resume'
 import Spotify from './components/window/Spotify'
+import Cli from './components/window/Cli'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
     <Note />
     {/* <Resume /> */}
     <Spotify />
+    <Cli />
    </main>
   )
 }
