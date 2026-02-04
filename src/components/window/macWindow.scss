@@ -1,6 +1,7 @@
 .window{
-    width: 400px;
-    height: 300px;
+    // width: 600px;
+    // height: 400px;
+    height: 100%;
     background-color: black;
     border-radius: 0.5rem;
     color: rgb(206, 206, 206);
@@ -41,6 +42,10 @@
      
     }
 
-    
+    .main-content{
+        height: 100%;
+        // overflow: scroll;
+    }
+
     
 }
