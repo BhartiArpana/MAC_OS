@@ -5,7 +5,7 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Markdown from 'react-markdown' 
 import './notes.scss'
 
-const Note = () => {
+const Note = ({windowName, setWindowState}) => {
   const [markdown, setmarkdown] = useState('')
   useEffect(()=>{
     fetch('/note.txt')
@@ -16,7 +16,7 @@ const Note = () => {
     })
   })
   return (
-    <MacWindow>
+    <MacWindow windowName={windowName} setWindowState={setWindowState} width="50vw" height="60vh">
       <div className="note-window">
         {markdown?<SyntaxHighlighter style={docco} language='typescript'>{markdown}</SyntaxHighlighter  >:<p>Loading...</p>}
       </div>

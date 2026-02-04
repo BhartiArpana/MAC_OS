@@ -22,9 +22,9 @@ function GitHubCard({data={id:1,image:"",title:"",description:"",tags:[],repoLin
     </div>
 }
 
-const Github = () => {
+const Github = ({windowName, setWindowState}) => {
   return (
-   <MacWindow>
+   <MacWindow windowName={windowName} setWindowState={setWindowState} width="60vw" height="70vh">
       <div className="cards">
     {
         githubData.map(item=><GitHubCard data={item} key={item.id}/>)
